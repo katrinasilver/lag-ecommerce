@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/katrinasilver/lag-ecommerce/issues"
   },
-  "homepage": "https://github.com/katrinasilver/lag-ecommerce#readme"
+  "homepage": "https://github.com/katrinasilver/lag-ecommerce#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
 }
