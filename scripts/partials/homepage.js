@@ -1,1 +1,1 @@
-$('#carousel').carousel() // initialize the homepage carousel
+module.exports = {}
