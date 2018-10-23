@@ -1,1 +1,1 @@
-$('#carousel').carousel()
+$('#carousel').carousel() // initialize the homepage carousel
