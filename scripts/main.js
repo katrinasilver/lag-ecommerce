@@ -10,3 +10,6 @@ addCartButton.forEach(a => {
     e.preventDefault() //hijack all btn-primaries behavior from scrolling to top when clicked!
   })
 })
+
+$('body').prepend('<header></header>') // add the header element at the top of the body
+document.querySelector('header').innerHTML = homepage.headerTemplate() // append the header template inside the header tag
