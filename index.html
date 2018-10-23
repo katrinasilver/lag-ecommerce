@@ -52,33 +52,39 @@
     <div class="py-3 row">
       <div class="col-md-4 mb-3">
         <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/100x80&text=Product" alt="Card image cap">
+          <span class="frame">
+            <img class="card-img-top" src="./assets/c-spinosaurus-aegyptiacus.jpg" alt="Carnivore Spino Guy">
+          </span>
           <div class="card-body">
-            <h5 class="card-title">Velociraptor</h5>
+            <h5 class="card-title">Spinosaurus - Carnivore</h5>
             <p class="lead">$5.00</p>
-            <a href="#" class="btn btn-primary"><i class="text-white-50 fa fa-plus"></i> Add to Cart</a>
+            <a href="#" class="product btn btn-primary"><i class="text-white-50 fa fa-plus"></i> Add to Cart</a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 mb-3">
         <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/100x80&text=Product" alt="Card image cap">
+          <span class="frame">
+            <img class="card-img-top" src="./assets/h-diplodocus.jpg" alt="Herbivore Diplo Dude">
+          </span>
           <div class="card-body">
-            <h5 class="card-title">Pterodactyl</h5>
+            <h5 class="card-title">Diplodocus - Herbivore</h5>
             <p class="lead">$5.00</p>
-            <a href="#" class="btn btn-primary"><i class="text-white-50 fa fa-plus"></i> Add to Cart</a>
+            <a href="#" class="product btn btn-primary"><i class="text-white-50 fa fa-plus"></i> Add to Cart</a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 mb-3">
         <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/100x80&text=Product" alt="Card image cap">
+          <span class="frame">
+            <img class="card-img-top" src="./assets/o-troodon.jpg" alt="Omnivore Troo Looloo">
+          </span>
           <div class="card-body">
-            <h5 class="card-title">Andrewsaurus</h5>
+            <h5 class="card-title">Troodon - Omnivore</h5>
             <p class="lead">$5.00</p>
-            <a href="#" class="btn btn-primary"><i class="text-white-50 fa fa-plus"></i> Add to Cart</a>
+            <a href="#" class="product btn btn-primary"><i class="text-white-50 fa fa-plus"></i> Add to Cart</a>
           </div>
         </div>
       </div>
@@ -94,13 +100,11 @@
     <form class="form-inline">
       <div class="form-group mr-2 mb-2">
         <label for="email" class="sr-only">Password</label>
-        <input type="email" class="form-control" id="email" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" placeholder="Type Your Email">
+        <input type="email" class="form-control" id="email" placeholder="Type Your Email">
       </div>
-      <button type="submit" class="signup btn btn-primary mb-2"><i class="text-white-50 fa fa-envelope"></i> Sign-up</button>
-      <div class="d-none alert alert-success" role="alert">
-        A simple success alert—check it out!
-      </div>
+      <button type="submit" id="signup" class="btn btn-primary mb-2"><i class="text-white-50 fa fa-envelope"></i> Sign-up</button>
     </form>
+    <div id="email-success" class="d-none alert alert-success" role="alert"></div>
 
   </div>
 

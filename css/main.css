@@ -4,6 +4,10 @@
   .carousel .carousel-item {
     margin-top: -5%; }
 
+.card .frame {
+  max-height: 230px;
+  overflow: hidden; }
+
 .jumbotron {
   background-image: url("/assets/forest.jpg");
   background-size: 100%;
