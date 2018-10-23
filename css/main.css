@@ -1,2 +1,14 @@
-.jumbotron .form-inline {
-  justify-content: center; }
+.carousel {
+  max-height: 600px;
+  overflow: hidden; }
+  .carousel .carousel-item {
+    margin-top: -5%; }
+
+.jumbotron {
+  background-image: url("/assets/forest.jpg");
+  background-size: 100%;
+  background-position: center; }
+  .jumbotron .form-inline {
+    justify-content: center; }
+    .jumbotron .form-inline .lead {
+      background-color: #ffffff; }
