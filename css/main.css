@@ -1,18 +1,35 @@
-.carousel {
-  max-height: 600px;
+.carousel .carousel-item {
+  max-height: 500px;
   overflow: hidden; }
-  .carousel .carousel-item {
-    margin-top: -5%; }
+
+.carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
 
 .card .frame {
-  max-height: 230px;
+  max-height: 200px;
   overflow: hidden; }
 
 .jumbotron {
   background-image: url("/assets/forest.jpg");
   background-size: 100%;
   background-position: center; }
+  .jumbotron h2, .jumbotron p {
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
   .jumbotron .form-inline {
     justify-content: center; }
     .jumbotron .form-inline .lead {
       background-color: #ffffff; }
+    .jumbotron .form-inline .form-control {
+      width: 500px; }
+  .jumbotron .alert {
+    margin: 1rem auto;
+    transition: .3s ease-in;
+    width: 30%; }
+  .jumbotron .invisible {
+    opacity: 0;
+    transition: .3s ease-out; }
