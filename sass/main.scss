@@ -23,6 +23,16 @@
     max-height: 200px;
     overflow: hidden;
   }
+
+  .card-body {
+    position: relative;
+
+    .product.btn-primary {
+      bottom: 1rem;
+      position: absolute;
+      right: 1rem;
+    }
+  }
 }
 
 .jumbotron {
@@ -52,9 +62,9 @@
     transition: .3s ease-in;
     width: 30%;
   }
+}
 
-  .invisible {
-    opacity: 0;
-    transition: .3s ease-out;
-  }
+.invisible {
+  opacity: 0;
+  transition: .3s ease;
 }

@@ -15,6 +15,15 @@ addCartButton.forEach(a => {
   })
 })
 
+let card = document.querySelectorAll('.product.card')
+card.forEach(c => {
+  c.addEventListener('mouseenter', (e) => {
+    let cart = e.target.children[1].children[2] // this is the add to cart button
+    homepage.show(cart, 'invisible')
+    c.addEventListener('mouseleave', () => { homepage.hide(cart, 'invisible', 0) })
+  })
+})
+
 // Sign-up Validation
 let emailButton = document.querySelector('#signup')
 let email = document.querySelector('#email')
@@ -27,11 +36,11 @@ emailButton.addEventListener('click', (e) => {
     ( notice.textContent = 'Thanks for Signing Up!',
     homepage.show(notice, 'invisible'),
     homepage.reset('.jumbotron .form-inline'),
-    homepage.hide(notice, 'invisible') )
+    homepage.hide(notice, 'invisible', 2000) )
   : !regex.exec(email.value) ?
     ( notice.textContent = 'Please provide a valid email',
     homepage.show(notice, 'invisible'),
     homepage.reset('.jumbotron .form-inline'),
-    homepage.hide(notice, 'invisible') )
+    homepage.hide(notice, 'invisible', 2000) )
   : false
 })

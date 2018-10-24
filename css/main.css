@@ -13,6 +13,13 @@
   max-height: 200px;
   overflow: hidden; }
 
+.card .card-body {
+  position: relative; }
+  .card .card-body .product.btn-primary {
+    bottom: 1rem;
+    position: absolute;
+    right: 1rem; }
+
 .jumbotron {
   background-image: url("/assets/forest.jpg");
   background-size: 100%;
@@ -24,3 +31,13 @@
     justify-content: center; }
     .jumbotron .form-inline .lead {
       background-color: #ffffff; }
+    .jumbotron .form-inline .form-control {
+      width: 500px; }
+  .jumbotron .alert {
+    margin: 1rem auto;
+    transition: .3s ease-in;
+    width: 30%; }
+
+.invisible {
+  opacity: 0;
+  transition: .3s ease; }

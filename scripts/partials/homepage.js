@@ -46,7 +46,7 @@ const headerTemplate = () => {
 }
 
 const reset = (className) => document.querySelector(className).reset()
-const hide = (selector, className) => setTimeout(() => { selector.classList.add(className) }, 2000)
+const hide = (selector, className, time) => setTimeout(() => { selector.classList.add(className) }, time)
 const show = (selector, className) => selector.classList.remove(className)
 
 module.exports = {
