@@ -9,13 +9,13 @@
   right: 0;
   width: 100%; }
 
-.card .frame {
+.product.card .frame {
   max-height: 200px;
   overflow: hidden; }
 
-.card .card-body {
+.product.card .card-body {
   position: relative; }
-  .card .card-body .product.btn-primary {
+  .product.card .card-body .product.btn-primary {
     bottom: 1rem;
     position: absolute;
     right: 1rem; }
@@ -36,7 +36,7 @@
   .jumbotron .alert {
     margin: 1rem auto;
     transition: .3s ease-in;
-    width: 30%; }
+    width: 35%; }
 
 .invisible {
   opacity: 0;
