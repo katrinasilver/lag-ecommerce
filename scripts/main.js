@@ -8,13 +8,13 @@ document.querySelector('header').innerHTML = homepage.headerTemplate() // append
 
 $('#carousel').carousel() // initialize the homepage carousel
 
+// hijack all btn-primaries behavior from scrolling to top when clicked!
 let addCartButton = document.querySelectorAll('.product.btn.btn-primary')
 addCartButton.forEach(a => {
-  a.addEventListener('click', (e) => {
-    e.preventDefault() //hijack all btn-primaries behavior from scrolling to top when clicked!
-  })
+  a.addEventListener('click', (e) => { e.preventDefault() })
 })
 
+// add the hover button effect on the products per project requirements
 let card = document.querySelectorAll('.product.card')
 card.forEach(c => {
   c.addEventListener('mouseenter', (e) => {
@@ -24,7 +24,7 @@ card.forEach(c => {
   })
 })
 
-// Sign-up Validation
+// Email Sign-up Validation
 let emailButton = document.querySelector('#signup')
 let email = document.querySelector('#email')
 let notice = document.querySelector('#email-notice')
@@ -33,14 +33,9 @@ let regex = new RegExp(/^[A-Za-z0-9.+]+@[A-Za-z0-9.+]+\.[a-z]{2,}/g)
 emailButton.addEventListener('click', (e) => {
   e.preventDefault()
   email.value && regex.exec(email.value) ?
-    ( notice.textContent = 'Thanks for Signing Up!',
-    homepage.show(notice, 'invisible'),
-    homepage.reset('.jumbotron .form-inline'),
+    ( notice.textContent = 'Thanks for Signing Up!', homepage.show(notice, 'invisible'), homepage.reset('.jumbotron > .form-inline'),
     homepage.hide(notice, 'invisible', 2000) )
   : !regex.exec(email.value) ?
-    ( notice.textContent = 'Please provide a valid email',
-    homepage.show(notice, 'invisible'),
-    homepage.reset('.jumbotron .form-inline'),
-    homepage.hide(notice, 'invisible', 2000) )
+    ( notice.textContent = 'Please provide a valid email', homepage.show(notice, 'invisible'), homepage.reset('.jumbotron > .form-inline'), homepage.hide(notice, 'invisible', 2000) )
   : false
 })
