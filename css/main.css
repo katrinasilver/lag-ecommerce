@@ -1,3 +1,8 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
+
 .carousel .carousel-item {
   max-height: 500px;
   overflow: hidden; }
