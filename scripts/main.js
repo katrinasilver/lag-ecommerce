@@ -24,8 +24,14 @@ let regex = new RegExp(/^[A-Za-z0-9.+]+@[A-Za-z0-9.+]+\.[a-z]{2,}/g)
 emailButton.addEventListener('click', (e) => {
   e.preventDefault()
   email.value && regex.exec(email.value) ?
-    (notice.textContent = 'Thanks for Signing Up!', homepage.show(notice, 'invisible'), homepage.reset('.jumbotron .form-inline'), homepage.hide(notice, 'invisible'))
-  : !regex.exec(this.value) ?
-      (notice.textContent = 'Please provide a valid email', homepage.show(notice, 'invisible'), homepage.reset('.jumbotron .form-inline'), homepage.hide(notice, 'invisible'))
+    ( notice.textContent = 'Thanks for Signing Up!',
+    homepage.show(notice, 'invisible'),
+    homepage.reset('.jumbotron .form-inline'),
+    homepage.hide(notice, 'invisible') )
+  : !regex.exec(email.value) ?
+    ( notice.textContent = 'Please provide a valid email',
+    homepage.show(notice, 'invisible'),
+    homepage.reset('.jumbotron .form-inline'),
+    homepage.hide(notice, 'invisible') )
   : false
 })
