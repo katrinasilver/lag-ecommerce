@@ -36,6 +36,6 @@ emailButton.addEventListener('click', (e) => {
     ( notice.textContent = 'Thanks for Signing Up!', homepage.show(notice, 'invisible'), homepage.reset('.jumbotron > .form-inline'),
     homepage.hide(notice, 'invisible', 2000) )
   : !regex.exec(email.value) ?
-    ( notice.textContent = 'Please provide a valid email', homepage.show(notice, 'invisible'), homepage.reset('.jumbotron > .form-inline'), homepage.hide(notice, 'invisible', 2000) )
+    ( notice.textContent = 'Please provide a valid email', homepage.show(notice, 'invisible'), homepage.hide(notice, 'invisible', 2000) )
   : false
 })
