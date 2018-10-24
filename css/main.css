@@ -16,3 +16,7 @@
     justify-content: center; }
     .jumbotron .form-inline .lead {
       background-color: #ffffff; }
+.list-inline-item {
+    padding: 100px;
+    color: red;
+}
