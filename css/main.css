@@ -24,12 +24,3 @@
     justify-content: center; }
     .jumbotron .form-inline .lead {
       background-color: #ffffff; }
-    .jumbotron .form-inline .form-control {
-      width: 500px; }
-  .jumbotron .alert {
-    margin: 1rem auto;
-    transition: .3s ease-in;
-    width: 30%; }
-  .jumbotron .invisible {
-    opacity: 0;
-    transition: .3s ease-out; }
