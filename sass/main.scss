@@ -10,6 +10,7 @@ header {
 .carousel {
 
   .carousel-item {
+    margin-top: 3rem;
     max-height: 500px;
     overflow: hidden;
   }
@@ -43,7 +44,7 @@ header {
 
 .jumbotron {
   background-image: url('/assets/forest.jpg');
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 
   h2, p {
