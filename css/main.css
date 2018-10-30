@@ -35,7 +35,7 @@ header {
     font-size: 0; }
     .rating label:before {
       background: #fcb551;
-      content: "\f005";
+      content: '\f005';
       display: block;
       font: 1rem/1 FontAwesome;
       position: relative;
