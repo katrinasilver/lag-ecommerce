@@ -26,14 +26,14 @@ header {
     position: absolute;
     right: 1rem; }
 
-.product.card .rating {
+.rating {
   unicode-bidi: bidi-override;
   direction: rtl;
   width: 8em; }
-  .product.card .rating label {
+  .rating label {
     display: inline-block;
     font-size: 0; }
-    .product.card .rating label:before {
+    .rating label:before {
       background: #fcb551;
       content: "\f005";
       display: block;
@@ -41,7 +41,7 @@ header {
       position: relative;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
-  .product.card .rating input {
+  .rating input {
     left: -999999px;
     position: absolute; }
 
