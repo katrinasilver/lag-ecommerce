@@ -18,7 +18,7 @@ addCartButton.forEach(a => {
 let card = document.querySelectorAll('.product.card')
 card.forEach(c => {
   c.addEventListener('mouseenter', (e) => {
-    let cart = e.target.children[1].children[2] // this is the add to cart button
+    let cart = e.target.children[1].children[3] // this is the add to cart button
     homepage.show(cart, 'invisible')
     c.addEventListener('mouseleave', () => { homepage.hide(cart, 'invisible', 0) })
   })

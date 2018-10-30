@@ -40,6 +40,33 @@ header {
       right: 1rem;
     }
   }
+
+  .rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    width: 8em;
+
+    label {
+      display: inline-block;
+      font-size: 0;
+
+      &:before {
+        background: #fcb551;
+        content: "\f005";
+        display: block;
+        font: 1rem/1 FontAwesome;
+        position: relative;
+
+        -webkit-background-clip: text; //need webkit to work
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    input {
+      left: -999999px;
+      position: absolute;
+    }
+}
 }
 
 .jumbotron {
