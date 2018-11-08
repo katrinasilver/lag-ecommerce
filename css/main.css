@@ -14,7 +14,6 @@
     box-sizing: border-box;
 }
 
-
 .checkoutHeader{
     color:lightblue;
     text-align: left;
@@ -39,70 +38,81 @@
     width: 500px;
 }
 
-/* .checkout-form{
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
 
-} */
+.carousel .carousel-item {
+  margin-top: 3rem;
+  max-height: 500px;
+  overflow: hidden; }
 
-#shipping-firstname{
+.carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+.product.card .frame {
+  max-height: 200px;
+  overflow: hidden; }
+
+.product.card .card-body {
+  position: relative; }
+  .product.card .card-body .product.btn-primary {
+    bottom: 1rem;
+    position: absolute;
+    right: 1rem; }
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  width: 8em; }
+  .rating label {
+    display: inline-block;
+    font-size: 0; }
+    .rating label:before {
+      background: #fcb551;
+      content: '\f005';
+      display: block;
+      font: 1rem/1 FontAwesome;
+      position: relative;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+  .rating input {
+    left: -999999px;
+    position: absolute; }
+
+.jumbotron {
+  background-image: url("/assets/forest.jpg");
+  background-size: cover;
+  background-position: center; }
+  .jumbotron h2, .jumbotron p {
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  .jumbotron .form-inline {
+    justify-content: center; }
+    .jumbotron .form-inline .lead {
+      background-color: #ffffff; }
+    .jumbotron .form-inline .form-control {
+      width: 500px; }
+  .jumbotron .alert {
+    margin: 1rem auto;
+    transition: .3s ease-in;
+    width: 35%; }
+
+.invisible {
+  opacity: 0;
+  transition: .3s ease; }
+
+.dinoCard {
+    margin: 25px;
+    padding: 5px;
 
 }
 
-#shipping-lastname{
-
-}
-
-#shipping-companyName{
-
-}
-
-#shipping-address{
-
-}
-
-#shipping-town{
-
-}
-
-#shipping-state{
-
-}
-
-#shipping-zipcode{
-
-}
-
-#checkout-validation{
-
-}
-
-#billing-firstname{
-
-}
-
-#billing-lastname{
-
-}
-
-#billing-companyname{
-
-}
-
-#billing-address{
-
-}
-
-#billing-town{
-
-}
-
-#billing-town{
-
-}
-
-#billing-state{
-
-}
-
-#billing-zipcode{
-
+.sort-choice:focus {
+    background-color: blue;
 }
