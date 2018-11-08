@@ -1,4 +1,10 @@
-.list-inline-item {
-    padding: 100px;
-    color: red;
+
+.dinoCard {
+    margin: 25px;
+    padding: 5px;
+
+}
+
+.sort-choice:focus {
+    background-color: blue;
 }
