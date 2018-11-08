@@ -15,11 +15,261 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
       crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Document</title>
+    <title>Checkout box for the boys</title>
   </head>
 
   <body>
-    <h1>sup</h1>
+    <h1 class = 'checkoutHeader'>Check Out</h1>
+    <br>
+    <hr style="height:1px;border-top:1px solid lightblue" />
+
+    <div class='container' id = 'checkoutcontainer'>
+      <div class="product-box row">
+        <div class="checkout-product-column1 col-xs-6" style="align-content: center">
+          <br><br><br>
+          <h3>
+            THANK YOU FOR YOUR PURCHASE
+          </h3>
+        </div>
+        <div class="checkout-product-column2 col-xs-6">
+        <table class='checkout-table'>
+          <thead>
+            <tr>
+              <td><strong>Dinos</strong></td>
+              <td><strong>Quantity</strong></td>
+              <td><strong>Price</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chirostenotes</td>
+              <td>x8</td>
+              <td>$7200</td>
+            </tr>
+            <tr>
+              <td>Diplodocus</td>
+              <td>x1</td>
+              <td>$2200</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>TOTAL</strong></td>
+              <td>$9400</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+      <form class = 'checkout-box'>
+      <div class='checkout-form row'>
+        <div class="checkout-shipping col-md-6">
+          <h4 style="background-color: lightgray;text-align: center"><strong>SHIPPING</strong></h4>
+          <br>
+
+          <div class="row">
+              <div class="col-md-6">
+                <label for="firstName">First Name<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="First Name" name="firstName" id='shipping-firstname' required oninvalid="this.setCustomValidity('Please enter first name')"
+                oninput="setCustomValidity('')">
+              </div>
+              <div class="col-md-6">
+                <label for="lastName">Last Name<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Last Name" name="lastName" id='shipping-lastname' required oninvalid="this.setCustomValidity('Please enter second name')"
+                oninput="setCustomValidity('')">
+              </div>
+            </div>
+
+              <div class="row">
+                  <div class="col-lg-12">
+                    <label for="companyName">Company Name</label>
+                    <input class="form-control" type="text" placeholder="Company Name" name="companyName" id='shipping-companyName'>
+                  </div>
+              </div>
+
+              <hr/>
+              
+
+              <div class="row">
+                  <div class="col-md-12">
+                    <label for="address">Address<span>*</span></label>
+                    <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]" id='shipping-address' required oninvalid="this.setCustomValidity('Please Enter Address')"
+                    oninput="setCustomValidity('')">
+                    <input class="form-control" type="text" placeholder="Apt / Suite" name="address[line2]" id='shipping-appar'>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <label for="city">Town / City<span>*</span></label>
+                    <input class="required required-presence form-control" type="text" placeholder="Town / City Name" name="city" id='shipping-town' required oninvalid="this.setCustomValidity('Please Enter city or town')"
+                    oninput="setCustomValidity('')">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="state">State<span>*</span></label>
+                    <select name="state" class="required required-state form-control" id='shipping-state' required oninvalid="this.setCustomValidity('Please Enter State')"
+                    oninput="setCustomValidity('')">
+                      <option value="">Select a State</option>
+                      <option value="co">CO - Colorado</option>
+                  <option value="ne">NE - Nevada</option>
+                  <option value="ca">CA - California</option>
+                  <option value="wa">WA - Washington</option>
+                  <option value="or">OR - Oregon</option>
+                  <option value="ar">AR - Arizona</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                      <label for="zip">Zip Code<span>*</span></label>
+                      <input class="required required-zip form-control" maxlength="10" type="text" placeholder="Zip Code" name="zip" id='shipping-zipcode' required oninvalid="this.setCustomValidity('please enter in zipcode')"
+                      oninput="setCustomValidity('')">
+                  </div>
+                </div>
+
+        <hr/>
+
+        <div class="row">
+          <label class="copy">
+            <div class="col-s-6"><p>My billing address is the same</p></div>
+            <div class="col-s-6"><input type="checkbox" id='checkbox-validation'></div>
+          </label>
+        </div>
+      </div>
+        <div class="checkout-billing col-md-6">
+          <h4 style="background-color: lightgray;text-align: center"><strong>BILLING</strong></h4>
+
+          <div class="row">
+              <div class="col-md-6">
+                <label for="firstName">First Name<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="First Name" name="firstName" id ='billing-firstname'required oninvalid="this.setCustomValidity('Please Enter first name')"
+                oninput="setCustomValidity('')">
+              </div>
+              <div class="col-md-6">
+                <label for="lastName">Last Name<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Last Name" name="lastName" id='billing-lastname'required oninvalid="this.setCustomValidity('Please enter last name')"
+                oninput="setCustomValidity('')">
+              </div>
+          </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="companyName">Company Name</label>
+                <input class="form-control" type="text" placeholder="Company Name" name="companyName" id='billing-companyName' oninvalid="this.setCustomValidity('Please Enter Company name')"
+                oninput="setCustomValidity('')">
+              </div>
+            </div>
+
+          <hr/>
+          
+            <div class="row">
+              <div class="col-md-12">
+                <label for="address">Address<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]" id='billing-address' required  
+                oninvalid="this.setCustomValidity('Please Enter Address')"
+                oninput="setCustomValidity('')">
+                <input class="form-control" type="text" placeholder="Apt / Suite" name="address[line2]" id='billing-appar'>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="city">Town / City<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Town / City Name" name="city" id='billing-town' required oninvalid="this.setCustomValidity('Please Enter Town or City')"
+                oninput="setCustomValidity('')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="state">State<span>*</span></label>
+                <select name="state" class="required required-state form-control" id='billing-state' required oninvalid="this.setCustomValidity('Please enter State')"
+                oninput="setCustomValidity('')">
+                  <option value="">Select a State</option>
+                  <option value="co">CO - Colorado</option>
+                  <option value="ne">NE - Nevada</option>
+                  <option value="ca">CA - California</option>
+                  <option value="wa">WA - Washington</option>
+                  <option value="or">OR - Oregon</option>
+                  <option value="ar">AR - Arizona</option>
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="zip">Zip Code<span>*</span></label>
+                <input class="required required-zip form-control" maxlength="10" type="text" placeholder="Zip Code" name="zip" id='billing-zipcode' required oninvalid="this.setCustomValidity('Please enter Zip Code')"
+                oninput="setCustomValidity('')">
+              </div>
+            </div>
+
+          <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <label for="cc-number">Card Number<span>*</span></label>
+                <input class="required cc-number form-control" type="text" maxlength="16" placeholder="Credit Card Number" name="cc-number" id='creditcard-info' required oninvalid="this.setCustomValidity('Please Enter card numbers')"
+                oninput="setCustomValidity('')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="cc-expiration">Expiration<span>*</span></label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <select name="cc-mm" class="required cc-mm form-control" id = 'checkout-ccmm' required oninvalid="this.setCustomValidity('Please Enter month for Experitation date')"
+                    oninput="setCustomValidity('')">
+                      <option value=""> - MM - </option>
+                      <option value="01">01 - Jan</option>
+                      <option value="02">02 - Feb</option>
+                      <option value="03">03 - Mar</option>
+                      <option value="04">04 - Apr</option>
+                      <option value="05">05 - May</option>
+                      <option value="06">06 - Jun</option>
+                      <option value="07">07 - Jul</option>
+                      <option value="08">08 - Aug</option>
+                      <option value="09">09 - Sep</option>
+                      <option value="10">10 - Oct</option>
+                      <option value="11">11 - Nov</option>
+                      <option value="12">12 - Dec</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <select name="cc-yy" class="required cc-yy form-control" id='checkout-cc-yy' required oninvalid="this.setCustomValidity('Please Enter the credit card year Experitation date')"
+                    oninput="setCustomValidity('')">
+                      <option value=""> - YY - </option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="cc-cvc">CVC<span>*</span></label>
+                <input class="required required-presence cc-cvc form-control" maxlength="4" type="text" placeholder="CVC" name="cc-cvc" id='cvc' required oninvalid="this.setCustomValidity('Please Enter the CVC number')"
+                oninput="setCustomValidity('')">
+              </div>
+            </div>
+
+            <div class="checkout-purchase row">
+            <hr/>
+            <br>
+            <div class='col-md-12'>
+
+              <div class="cc-message row">
+              </div>  
+              <hr/>
+                <br>
+            <button id="purchase" class="btn btn-primary btn-lg">Purchase</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+
   </body>
 
 </html>
