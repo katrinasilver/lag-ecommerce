@@ -66,3 +66,13 @@ header {
 .invisible {
   opacity: 0;
   transition: .3s ease; }
+
+.dinoCard {
+    margin: 25px;
+    padding: 5px;
+
+}
+
+.sort-choice:focus {
+    background-color: blue;
+}
