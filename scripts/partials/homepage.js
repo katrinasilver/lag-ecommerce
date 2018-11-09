@@ -46,29 +46,6 @@ const reset = (className) => document.querySelector(className).reset()
 const hide = (selector, className, time) => setTimeout(() => { selector.classList.add(className) },  time)
 const show = (selector, className) => selector.classList.remove(className)
 
-const validateForm = () => {
-
-  let emailButton = document.querySelector('#signup')
-  let email = document.querySelector('#email')
-  let notice = document.querySelector('#email-notice')
-  let regex = new RegExp(/^[A-Za-z0-9.+]+@[A-Za-z0-9.+]+\.[a-z]{2,}/g)
-
-  emailButton.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    if (email.value && regex.exec(email.value)) {
-      notice.textContent = 'Thanks for Signing Up!'
-      reset('.jumbotron > .form-inline')
-      show(notice, 'invisible')
-      hide(notice, 'invisible', 2000)
-    } else if (!regex.exec(email.value)) {
-      notice.textContent = 'Please provide a valid email'
-      show(notice, 'invisible')
-      hide(notice, 'invisible', 2000)
-    }
-  })
-}
-
 module.exports = {
-  headerTemplate, show, hide, reset, validateForm
+  headerTemplate, show, hide, reset
 }
