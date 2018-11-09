@@ -1,24 +1,29 @@
 const checkout = require('./partials/checkout')
-const homepage = require('./partials/homepage')
 const products = require('./partials/products')
-
-// if (window.location === 'checkout') {
-//   initCheckout()
-// }
+const homepage = require('./partials/homepage')
 
 /* Homepage Scripts */
-$('body').prepend('<header></header>') // add the header element at the top of the body
-document.querySelector('header').innerHTML = homepage.headerTemplate() // append the header template inside the header tag
+if (window.location.href === 'index.html') {
+  homepage.validateForm()
+}
 
-$('#carousel').carousel() // initialize the homepage carousel
+if (window.location.href.indexOf('checkout') > -1) {
+  checkout.initCheckout()
+}
 
-// hijack all btn-primaries behavior from scrolling to top when clicked!
-let addCartButton = document.querySelectorAll('.product.btn.btn-primary')
-addCartButton.forEach(a => {
+$('body').prepend('<header class="border-bottom border-primary"></header>')
+document.querySelector('header').innerHTML = homepage.headerTemplate()
+
+$('body').append('<footer></footer>')
+document.querySelector('footer').innerHTML = products.footerTemplate()
+
+let allButtons = document.querySelectorAll('.product.btn.btn-primary')
+allButtons.forEach(a => {
   a.addEventListener('click', (e) => { e.preventDefault() })
 })
 
-// add the hover button effect on the products per project requirements
+$('#carousel').carousel()
+
 let card = document.querySelectorAll('.product.card')
 card.forEach(c => {
   c.addEventListener('mouseenter', (e) => {
@@ -26,21 +31,4 @@ card.forEach(c => {
     homepage.show(cart, 'invisible')
     c.addEventListener('mouseleave', () => { homepage.hide(cart, 'invisible', 0) })
   })
-})
-
-// Email Sign-up Validation
-let emailButton = document.querySelector('#signup')
-console.log(emailButton)
-let email = document.querySelector('#email')
-let notice = document.querySelector('#email-notice')
-let regex = new RegExp(/^[A-Za-z0-9.+]+@[A-Za-z0-9.+]+\.[a-z]{2,}/g)
-
-emailButton.addEventListener('click', (e) => {
-  e.preventDefault()
-  email.value && regex.exec(email.value) ?
-    ( notice.textContent = 'Thanks for Signing Up!', homepage.show(notice, 'invisible'), homepage.reset('.jumbotron > .form-inline'),
-    homepage.hide(notice, 'invisible', 2000) )
-  : !regex.exec(email.value) ?
-    ( notice.textContent = 'Please provide a valid email', homepage.show(notice, 'invisible'), homepage.hide(notice, 'invisible', 2000) )
-  : false
 })

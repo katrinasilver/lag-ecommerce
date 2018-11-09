@@ -12,17 +12,12 @@
     <script defer src="bundle.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-      crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Checkout box for the boys</title>
+    <title>DinoStore | Checkout</title>
   </head>
 
   <body>
-    <h1 class = 'checkoutHeader'>Check Out</h1>
-    <br>
-    <hr style="height:1px;border-top:1px solid lightblue" />
-
+    <h1 class ='checkoutHeader'>Check Out</h1>
     <div class='container' id = 'checkoutcontainer'>
       <div class="product-box row">
         <div class="checkout-product-column1 col-xs-6" style="align-content: center">
@@ -87,7 +82,7 @@
               </div>
 
               <hr/>
-              
+
 
               <div class="row">
                   <div class="col-md-12">
@@ -161,11 +156,11 @@
             </div>
 
           <hr/>
-          
+
             <div class="row">
               <div class="col-md-12">
                 <label for="address">Address<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]" id='billing-address' required  
+                <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]" id='billing-address' required
                 oninvalid="this.setCustomValidity('Please Enter Address')"
                 oninput="setCustomValidity('')">
                 <input class="form-control" type="text" placeholder="Apt / Suite" name="address[line2]" id='billing-appar'>
@@ -256,13 +251,13 @@
             <div class="checkout-purchase row">
             <hr/>
             <br>
-            <div class='col-md-12'>
+            <div class='col-md-12 mb-5'>
 
               <div class="cc-message row">
-              </div>  
+              </div>
               <hr/>
                 <br>
-            <button id="purchase" class="btn btn-primary btn-lg">Purchase</button>
+            <button id="purchase" class="product btn btn-primary btn-lg">Purchase</button>
             </div>
           </div>
         </div>

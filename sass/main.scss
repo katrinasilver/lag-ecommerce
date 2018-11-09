@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// Homepage Styles Start Here!
+/** Homepage styles **/
 header {
   position: fixed;
   width: 100%;
@@ -103,14 +103,18 @@ header {
   transition: .3s ease;
 }
 
+/** Product page styles **/
+
 .dinoCard {
     margin: 25px;
     padding: 5px;
-
 }
+
 .sort-choice:focus {
     background-color: blue;
 }
+
+/** Checkout styles **/
 
 .checkout-table {
     margin-top: 25px;
