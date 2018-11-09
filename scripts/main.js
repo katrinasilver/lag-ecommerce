@@ -3,6 +3,7 @@ const products = require('./partials/products')
 const homepage = require('./partials/homepage')
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
 
   if (window.location.href.indexOf('checkout') > -1) {
@@ -51,4 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       validator()
     })
   }
+
+ 
 })
+
