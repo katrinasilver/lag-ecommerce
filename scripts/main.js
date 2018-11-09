@@ -2,8 +2,6 @@ const checkout = require('./partials/checkout')
 const products = require('./partials/products')
 const homepage = require('./partials/homepage')
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
   if (window.location.href.indexOf('checkout') > -1) {
