@@ -72,7 +72,7 @@ header {
 .jumbotron {
   background-image: url('/assets/forest.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 
   h2, p {
     letter-spacing: 1px;
@@ -88,6 +88,10 @@ header {
 
     .form-control {
       width: 500px;
+    }
+
+    .form-control:invalid {
+      border-width: 2px;
     }
   }
 
