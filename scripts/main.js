@@ -38,19 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (emailButton) {
 
-    emailButton.addEventListener('click', (e) => {
-      e.preventDefault()
+    emailButton.addEventListener('click', () => {
+
       if (email.value && regex.exec(email.value)) {
         notice.textContent = 'Thanks for Signing Up!'
         homepage.reset('.jumbotron > .form-inline')
         homepage.show(notice, 'invisible')
         homepage.hide(notice, 'invisible', 2000)
 
-      } else if (email.value && !regex.exec(email.value)) {
+      } else if (!regex.exec(email.value)) {
         notice.textContent = 'Please provide a valid email'
         homepage.show(notice, 'invisible')
         homepage.hide(notice, 'invisible', 2000)
-
       }
     })
   }
