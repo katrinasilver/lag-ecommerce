@@ -1,43 +1,3 @@
-.list-inline-item {
-    padding: 100px;
-    color: red;
-}
-
-.checkout-table {
-    margin-top: 25px; 
-    display: table;
-    border-color: grey;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.checkoutHeader{
-    color:lightblue;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.product-box {
-    margin: 75px 0 25px; 
-}
-
-.checkout-product-column1 {
-    border: 50px;
-    padding: 50px;
-    display: center;
-    border-left: 50px;
-    background-color: lightgray;
-}
-.checkout-product-column2{
-    border: 50px;
-    padding: 50px;
-    display: center;
-    width: 500px;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -110,9 +70,43 @@ header {
 .dinoCard {
     margin: 25px;
     padding: 5px;
-
 }
 
 .sort-choice:focus {
     background-color: blue;
+}
+
+.checkout-table {
+    margin-top: 25px;
+    display: table;
+    border-color: grey;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.checkoutHeader{
+    color:lightblue;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.product-box {
+    margin: 75px 0 25px;
+}
+
+.checkout-product-column1 {
+    border: 50px;
+    padding: 50px;
+    display: center;
+    border-left: 50px;
+    background-color: lightgray;
+}
+.checkout-product-column2{
+    border: 50px;
+    padding: 50px;
+    display: center;
+    width: 500px;
 }

@@ -2,24 +2,20 @@
 // const homepage = require('./partials/homepage')
 // const products = require('./partials/products')
 
-
-
-
-
 //Footer template
 const footerTemplate = () => {
     return `
     <div class='container page-footer col-md-12 bg-primary text-white' style='height: 16em'>
 
     <div class='row col-md-12'>
-      <div class='col-md-3'> 
+      <div class='col-md-3'>
           <h3>Visit us! No cops.</h3>
           <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="190" id="gmap_canvas" src="https://maps.google.com/maps?q=flying%20pie%20pizzeria&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{text-align:right;height:190px;width:300px;}.gmap_canvas {overflow:hidden;background:none!important;height:190px;width:300px;}</style></div>
           Conveniently hidden under Flying Pie Pizzeria
       </div>
       <div class='col-md-3'>
           <h3>Coming soon...</h3>
-           
+
               <img src="./assets/vegasaurus.png" alt="DinoPark's Vegasaurus" class='img-responsive border border-white rounded' style="width: 25%">
                 Brand new dino: Vegasaurus
                 <img src="./assets/mastodon.jpg" alt="DinoPark's Vegasaurus" class='img-responsive border border-white rounded' style="width: 25%">
@@ -27,7 +23,7 @@ const footerTemplate = () => {
                 <img src="./assets/larryking.jpeg" alt="DinoPark's Vegasaurus" class='img-responsive border border-white rounded' style="width: 25%">
                 Larry King haha burn lol
       </div>
-      <div class='col-md-3'> 
+      <div class='col-md-3'>
           <h3>Services & Accessories</h3>
           <ul class='list-unstyled'>
               <li>Checkups</li>
@@ -47,8 +43,8 @@ const footerTemplate = () => {
               <li>Megala Don's Whalery & General</li>
               <li>Flex Seal</li>
               <li>Jeff Goldblum</li>
-              <li>Le Bon Marche</li> 
-              <li>JJ Abrams</li> 
+              <li>Le Bon Marche</li>
+              <li>JJ Abrams</li>
           </ul>
       </div>
     </div>
@@ -75,7 +71,7 @@ const allProducts = [
         pic: `./assets/h-brachiosaurus.jpg`,
         price: 3000,
         diet: 'Herbivore'
-    }, 
+    },
     {
         name: 'Triceratops',
         caption: `Triceratops in the streets, triceratops in the sheets.`,
@@ -83,7 +79,7 @@ const allProducts = [
         pic: `./assets/h-triceratops.jpg`,
         price: 1800,
         diet: 'Herbivore'
-    }, 
+    },
     {
         name: 'Giganotosaurus',
         caption: 'T-Rex performance at Allosaurus prices.',
@@ -91,7 +87,7 @@ const allProducts = [
         pic: `./assets/c-giganotosaurus-carolinii.jpg`,
         price: 1400,
         diet: 'Carnivore'
-    },  
+    },
     {
         name: 'Diplodocus',
         caption: `You can't spell Sdiplodocust without Diplodocus.`,
@@ -99,23 +95,23 @@ const allProducts = [
         pic: `./assets/h-diplodocus.jpg`,
         price: 2200,
         diet: 'Herbivore'
-    }, 
+    },
     {
         name: 'Troodon',
         caption: `"I'm a Troodon!"`,
         description: `One word...Troodon. Boom.`,
         pic: `./assets/o-troodon.jpg`,
         price: 4500,
-        diet: 'Omnivore' 
-    }, 
+        diet: 'Omnivore'
+    },
     {
         name: 'Spinosaurus',
         caption: `Spinning is a good trick!`,
         description: `So it’s Spinasaurus, like “spine,” they don’t spin. I mean they might. I don’t know. That’s really what you’re looking for? Cause you’re paying a premium for the spine thing with this sucker, that’s kind of the hook. Let me look in the back and see if we have anything that might be more spinny. No yeah, it’s confusing, you’re right. You gotta hear it out loud. OK be right back.`,
         pic: `./assets/c-spinosaurus-aegyptiacus.jpg`,
         price: 2000,
-        diet: 'Carnivore' 
-    }, 
+        diet: 'Carnivore'
+    },
     {
         name: 'Chirostenotes',
         caption: `Dinosaurs of a feather evolve together. Into birds.`,
@@ -123,7 +119,7 @@ const allProducts = [
         pic: `./assets/o-chirostenotes.jpg`,
         price: 900,
         diet: 'Omnivore'
-    }, 
+    },
     {
         name: 'Deinocheirus',
         caption: 'Just terrible.',
@@ -140,15 +136,15 @@ const allProducts = [
 
 
 function addDinoProduct(dino) {
-  
+
   let newDino = document.createElement('DIV')
   newDino.classList = 'dinoCard row col-md-12'
 
-  newDino.innerHTML=`<div class = 'col-md-4'> 
+  newDino.innerHTML=`<div class = 'col-md-4'>
   <div class='card'>
     <img class='card-img-top' src='${dino.pic}'>
     <div class='card-body'>
-      
+
       <p class='font-italic'>${dino.caption}</p>
     </div>
   </div> <!--card-->
@@ -162,15 +158,15 @@ function addDinoProduct(dino) {
       <a href='#' class="btn btn-primary"><i class="text-white-50 fa fa-plus"></i> Add to Cart</a>
     </div>
   </div>`
-  
+
   document.getElementById('product-field').append(newDino)
 
 }
 
 function renderProducts(products) {
-  for (dino of products) { 
+  for (dino of products) {
     addDinoProduct(dino)
-  }   
+  }
 }
 function renderHerbivores(products) {
     for (dino of products) {
@@ -221,14 +217,11 @@ function renderHigh(products) {
       addDinoProduct(highest)
     }
 }
-   
+
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
-    $('body').prepend('<header></header>') // add the header element at the top of the body
-    document.querySelector('header').innerHTML = homepage.headerTemplate() // append the header template inside the header tag
 
     $('body').append('<footer></footer>') // add the footer element at the top of the body
     document.querySelector('footer').innerHTML = footerTemplate() // append the footer template inside the header tag
