@@ -40,15 +40,6 @@ const initCheckout = () => {
         });
       }
     })
-
-    let checkPurchase = document.querySelector(".checkout-box");
-
-    if(checkPurchase) {
-      checkPurchase.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert("Thank you for ordering our Dinos!")
-      })
-    }
 }
 
 module.exports = {
