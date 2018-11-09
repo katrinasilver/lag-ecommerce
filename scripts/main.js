@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkout.initCheckout()
   }
 
-  $('body').prepend('<header class="border-bottom border-primary"></header>')
+  $('body').prepend('<header class="border-bottom border-dark"></header>')
   document.querySelector('header').innerHTML = homepage.headerTemplate()
 
   $('body').append('<footer></footer>')
@@ -31,26 +31,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  let emailButton = document.querySelector('#signup')
+  let emailButton = document.querySelector('#form-inline')
   let email = document.querySelector('#email')
   let notice = document.querySelector('#email-notice')
-  let regex = new RegExp(/^[A-Za-z0-9.+]+@[A-Za-z0-9.+]+\.[a-z]{2,}/g)
+
+  const validator = () => {
+    let regex = new RegExp(/^[A-Za-z0-9.+]+@[A-Za-z0-9.+]+\.[a-z]{2,}/g)
+    if (email.value && regex.test(email.value)) {
+      notice.textContent = 'Thanks for Signing Up!'
+      homepage.show(notice, 'invisible')
+      homepage.hide(notice, 'invisible', 1000)
+      homepage.reset('.jumbotron > .form-inline')
+    }
+  }
 
   if (emailButton) {
-
-    emailButton.addEventListener('click', () => {
-
-      if (email.value && regex.exec(email.value)) {
-        notice.textContent = 'Thanks for Signing Up!'
-        homepage.reset('.jumbotron > .form-inline')
-        homepage.show(notice, 'invisible')
-        homepage.hide(notice, 'invisible', 2000)
-
-      } else if (!regex.exec(email.value)) {
-        notice.textContent = 'Please provide a valid email'
-        homepage.show(notice, 'invisible')
-        homepage.hide(notice, 'invisible', 2000)
-      }
+    emailButton.addEventListener('submit', (e) => {
+      e.preventDefault()
+      validator()
     })
   }
 })

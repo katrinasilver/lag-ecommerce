@@ -1,12 +1,12 @@
 //Footer template
 const footerTemplate = () => {
     return `
-<div class='container page-footer col-md-12 bg-primary text-white pt-5'>
+<div class='container page-footer col-md-12 bg-dark text-white pt-5'>
 
 <div class='row col-md-12'>
     <div class='col-md-12 col-lg-3'>
         <h3>Visit us! No cops.</h3>
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="190" id="gmap_canvas" src="https://maps.google.com/maps?q=flying%20pie%20pizzeria&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{text-align:right;height:190px;width:300px;}.gmap_canvas {overflow:hidden;background:none!important;height:190px;width:300px;}</style></div>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="190" id="gmap_canvas" src="https://maps.google.com/maps?q=flying%20pie%20pizzeria&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{text-align:right;height:190px;width:300px;}.gmap_canvas {overflow:hidden;background:none!important;height:190px;width:300px;}</style></div><br/>
         Conveniently hidden under Flying Pie Pizzeria
     </div>
     <div class='col-md-12 col-lg-3'>
