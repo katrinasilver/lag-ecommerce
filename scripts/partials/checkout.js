@@ -42,13 +42,12 @@ const initCheckout = () => {
     })
 
     let checkPurchase = document.querySelector(".checkout-box");
-    
-    if(checkPurchase){
-    checkPurchase.addEventListener('submit', function (e) {
+
+    if(checkPurchase) {
+      checkPurchase.addEventListener('submit', function (e) {
         e.preventDefault();
-      console.log(checkPurchase)
-      alert("Thank you for ordering our Dinos!")
-    })
+        alert("Thank you for ordering our Dinos!")
+      })
     }
 }
 

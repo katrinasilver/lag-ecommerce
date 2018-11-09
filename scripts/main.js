@@ -6,9 +6,9 @@ const homepage = require('./partials/homepage')
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  if (window.location.href.indexOf('checkout') > -1) {
+  // if (window.location.href.indexOf('checkout') > -1) {
     checkout.initCheckout()
-  }
+  // }
 
   $('body').prepend('<header class="border-bottom border-dark"></header>')
   document.querySelector('header').innerHTML = homepage.headerTemplate()
@@ -53,6 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
- 
 })
-
